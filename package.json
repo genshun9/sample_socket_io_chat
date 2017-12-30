@@ -1,0 +1,25 @@
+{
+  "name": "sample_socket_io_chat",
+  "version": "1.0.0",
+  "description": "## カード紹介",
+  "main": "index.js",
+  "scripts": {
+    "server": "node src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genshun9/sample_socket_io_chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genshun9/sample_socket_io_chat/issues"
+  },
+  "homepage": "https://github.com/genshun9/sample_socket_io_chat#readme",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "socket.io": "2.0.4"
+  }
+}
