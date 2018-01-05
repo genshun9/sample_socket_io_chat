@@ -2,9 +2,12 @@
 
 ## 設計
 - クライアント
-  - ?
+  - react/flux
+  - typescript(@types)
 - サーバ
-  - node.js
+  - node.js/express/http
+  - javascript
+- 通信
   - socket.io
 - ビルド
   - parcel

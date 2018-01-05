@@ -1,13 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 /**
  * express設定
  * post処理に、req.bodyがunderfindになるので、body-parserを利用
- * index.htmlを返却する
+ * まず最初に、index.htmlを返却する
+ * 次に、index.html内で/distへのgetリクエストが走るので、parcelで出力した_index.htmlを返却する
  */
 const app = express();
 app.use(express.static('./'));
+app.get('/dist', (req, res) => {
+  res.sendFile(path.resolve(__dirname + "/../../dist/_index.html"));
+});
 app.use(bodyParser());
 
 /**
