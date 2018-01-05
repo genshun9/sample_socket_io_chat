@@ -6,3 +6,5 @@
 - サーバ
   - node.js
   - socket.io
+- ビルド
+  - parcel

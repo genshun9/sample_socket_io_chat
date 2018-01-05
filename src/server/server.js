@@ -35,17 +35,13 @@ io.sockets.on('connection', (socket) => {
 
   // 接続開始(接続元ユーザを保存し、他ユーザへ通知)
   socket.on('connected', (name) => {
-    console.log(`connected ${socket.toString()} ${name}`);
-
     userHash[socket.id] = name;
     io.sockets.emit('publish', {value: `${name}が入室しました`});
   });
 
   // メッセージ送信イベント
   socket.on('publish', (data) => {
-    console.log(`publish ${socket} ${data}`);
-
-    io.sockets.emit('publish', {value: data.value});
+    io.sockets.emit('publish', data);
   });
 
   // 接続終了イベント(接続元ユーザを削除し、他ユーザへ通知)
