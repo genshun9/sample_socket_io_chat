@@ -20,3 +20,6 @@
 - npm run compile-client（普段の開発は、localhost:1234を使う）
 - npm run start-server
 - localhost:3000を開く
+
+## 参考
+- [[Node.js] Socket.ioで双方向通信チャットアプリを構築 〜 JSおくのほそ道 #005](https://qiita.com/hosomichi/items/66b309a6c3c20d910218)
